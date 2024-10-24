@@ -23,5 +23,5 @@ const t = initTRPC.context<typeof createTRPCContext>().create({
 });
 
 // add the middleware to all the procedures you want to trace
-export const publicProcedure = t.procedure.use(trpcTracingMiddleware({ collectInput: true }))
+export const publicProcedure = t.procedure.use(tracing({ collectInput: true }))
 ```
